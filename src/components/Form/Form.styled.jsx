@@ -45,16 +45,16 @@ export const ContactInput = styled.input`
   border: 0;
   width: 100%;
   box-sizing: border-box;
-  color: #ffffff;
+  color: var(--white);
   font-size: 14px;
   font-family: Open Sans, Arial, sans-serif;
   text-shadow: 1px 1px 1px #232323;
   border-radius: 25px;
-  background: #bc3220;
-  caret-color: #ffffff;
+  background: var(--red);
+  caret-color: var(--white);
 
-  background: linear-gradient(to bottom, #bc3220 0%, #fa5846 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc3220', endColorstr='#fa5846', GradientType=0 );
+  background: linear-gradient(to bottom, var(--red) 0%, var(--light-red) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--red)', endColorstr='var(--light-red)', GradientType=0 );
 
   &:hover,
   &:focus {
@@ -72,17 +72,22 @@ export const SubmitBtn = styled.button`
   width: 250px;
 
   box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.5);
-  background: #ffbf00;
-  background: linear-gradient(to bottom, #ffbf00 0%, #fa9f17 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbf00', endColorstr='#fa9f17', GradientType=0 );
+  background: var(--yellow);
+  background: linear-gradient(
+    to bottom,
+    var(--yellow) 0%,
+    var(--dark-yellow) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--yellow)', endColorstr='var(--dark-yellow)', GradientType=0 );
   border: 0;
   border-radius: 30px;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 50px;
   cursor: pointer;
+  font-family: inherit;
   font-size: 20px;
   font-weight: 500;
-  text-shadow: -1px -1px #b86200, 0 1px 0 #ecb76b;
+  text-shadow: -1px -1px var(--dark-orange), 0 1px 0 var(--light-orange);
 
   &:hover,
   &:focus {
@@ -94,6 +99,6 @@ export const SubmitBtn = styled.button`
 
 export const Label = styled.label`
   font-size: 22px;
-  color: #ffffff;
-  text-shadow: -1px -2px #a91400, 0 1px 0 #ff7e6d;
+  color: var(--white);
+  text-shadow: -1px -2px var(--bright-red), 0 1px 0 var(--pale-red);
 `;

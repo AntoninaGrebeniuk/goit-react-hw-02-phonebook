@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Item, Name, Number, ContactBtn } from './ContactItem.styled';
+import { HiUserMinus } from 'react-icons/hi2';
+import { Item, Name, Number, RemoveBtn } from './ContactItem.styled';
 
 export function ContactItem({ contacts, onRemoveContact }) {
   return (
@@ -11,9 +12,9 @@ export function ContactItem({ contacts, onRemoveContact }) {
           <Item key={id}>
             <Name>{name}</Name>
             <Number>{number}</Number>
-            <ContactBtn type="button" onClick={() => onRemoveContact(id, name)}>
-              Delete
-            </ContactBtn>
+            <RemoveBtn type="button" onClick={() => onRemoveContact(id, name)}>
+              <HiUserMinus />
+            </RemoveBtn>
           </Item>
         );
       })}

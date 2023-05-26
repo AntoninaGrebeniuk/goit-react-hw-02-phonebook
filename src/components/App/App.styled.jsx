@@ -2,13 +2,9 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   height: '100vh';
-  /* display: flex; */
-  /* justify-content: space-around; */
-  /* align-items: center; */
   text-align: center;
   padding: 30px;
   font-size: 40;
-  color: '#010101';
 `;
 
 export const Wrapper = styled.div`
@@ -25,21 +21,21 @@ export const Wrapper = styled.div`
   padding: 20px;
   position: relative;
   border-radius: 3px;
-  border: 1px solid #2f3546;
+  border: 1px solid var(--grey-blue);
   -webkit-box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.5);
-  background: #2f3546;
+  background: var(--grey-blue);
 
   background: linear-gradient(
     to right,
-    #2f3546 0%,
-    #4e5672 29%,
-    #4e5672 50%,
-    #4e5672 71%,
-    #2f3546 100%
+    var(--grey-blue) 0%,
+    var(--light-grey-blue) 29%,
+    var(--light-grey-blue) 50%,
+    var(--light-grey-blue) 71%,
+    var(--grey-blue) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f3546', endColorstr='#4e5672', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--grey-blue)', endColorstr='var(--light-grey-blue)', GradientType=1 );
 
   &:before {
     content: '';
@@ -53,13 +49,13 @@ export const Wrapper = styled.div`
 
 export const Phonebook = styled.h1`
   margin-bottom: 10px;
-  color: #ffffff;
-  text-shadow: -2px -2px #221e2e, 0 2px 0 #686674;
+  color: var(--white);
+  text-shadow: -2px -2px var(--dark-violet), 0 2px 0 var(--grey-violet);
 `;
 
 export const Contacts = styled.h2`
   margin-bottom: 10px;
   font-size: 26px;
-  color: #ffffff;
-  text-shadow: -2px -2px #221e2e, 0 2px 0 #686674;
+  color: var(--white);
+  text-shadow: -2px -2px var(--dark-violet), 0 2px 0 var(--grey-violet);
 `;

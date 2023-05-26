@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
+import Notiflix from 'notiflix';
 import { Form } from '../Form/Form';
 import { ContactList } from '../ContactList/ContactList';
 import { Filter } from '../Filter/Filter';
@@ -18,7 +19,11 @@ export class App extends Component {
 
   createContact = data => {
     if (this.state.contacts.find(contact => contact.name === data.name)) {
-      alert(`${data.name} is already in contacts`);
+      Notiflix.Notify.warning(`${data.name} is already in contacts`, {
+        position: 'center-top',
+        fontSize: '15px',
+      });
+
       return;
     }
 
