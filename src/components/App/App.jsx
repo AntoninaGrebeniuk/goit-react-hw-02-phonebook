@@ -17,6 +17,11 @@ export class App extends Component {
   };
 
   createContact = data => {
+    if (this.state.contacts.find(contact => contact.name === data.name)) {
+      alert(`${data.name} is already in contacts`);
+      return;
+    }
+
     this.setState(prevState => ({
       contacts: [
         ...prevState.contacts,
@@ -30,7 +35,6 @@ export class App extends Component {
 
   onFilter = ({ target }) => {
     this.setState({ filter: target.value });
-    // console.log(this.state.filter);
   };
 
   getContactByName = () => {
