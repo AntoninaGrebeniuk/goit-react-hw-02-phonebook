@@ -1,13 +1,10 @@
 import styled from '@emotion/styled';
 
 export const FilterLabel = styled.label`
-  /* display: flex; */
-  /* flex-direction: column; */
-
-  /* align-items: center; */
   margin-bottom: 10px;
   font-size: 20px;
   color: #ffffff;
+  text-shadow: -1px -1px #221e2e, 0 1px 0 #686674;
 `;
 
 export const FilterInput = styled.input`
@@ -18,7 +15,7 @@ export const FilterInput = styled.input`
   width: 300px;
   box-sizing: border-box;
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-family: Open Sans, Arial, sans-serif;
   text-shadow: 1px 1px 1px #232323;
   border-radius: 25px;

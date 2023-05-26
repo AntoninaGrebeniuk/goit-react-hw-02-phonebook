@@ -6,8 +6,8 @@ export const ContactForm = styled.form`
   gap: 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
-  width: 300px;
+  margin-bottom: 20px;
+  width: 350px;
 
   /* width: 100%; */
   padding: 20px;
@@ -46,7 +46,7 @@ export const ContactInput = styled.input`
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-family: Open Sans, Arial, sans-serif;
   text-shadow: 1px 1px 1px #232323;
   border-radius: 25px;
@@ -56,6 +56,7 @@ export const ContactInput = styled.input`
   background: linear-gradient(to bottom, #bc3220 0%, #fa5846 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc3220', endColorstr='#fa5846', GradientType=0 );
 
+  &:hover,
   &:focus {
     outline: none;
     transition: transform 0.15s ease;
@@ -92,6 +93,7 @@ export const SubmitBtn = styled.button`
 `;
 
 export const Label = styled.label`
-  font-size: 20px;
+  font-size: 22px;
   color: #ffffff;
+  text-shadow: -1px -2px #a91400, 0 1px 0 #ff7e6d;
 `;

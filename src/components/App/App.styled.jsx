@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   height: '100vh';
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* text-align: center; */
-  padding: 80px;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  text-align: center;
+  padding: 30px;
   font-size: 40;
   color: '#010101';
 `;
@@ -49,4 +49,17 @@ export const Wrapper = styled.div`
     height: 2px;
     width: 100%;
   }
+`;
+
+export const Phonebook = styled.h1`
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: -2px -2px #221e2e, 0 2px 0 #686674;
+`;
+
+export const Contacts = styled.h2`
+  margin-bottom: 10px;
+  font-size: 26px;
+  color: #ffffff;
+  text-shadow: -2px -2px #221e2e, 0 2px 0 #686674;
 `;

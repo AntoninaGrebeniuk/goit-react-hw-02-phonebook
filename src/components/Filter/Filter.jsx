@@ -1,12 +1,21 @@
-// import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import { FilterLabel, FilterInput } from './Filter.styled';
 
-// filterInput = nanoid();
-export function Filter() {
+export function Filter({ value, onFilter }) {
   return (
     <FilterLabel>
       Find contacts by name
-      <FilterInput type="text" name="filter" />
+      <FilterInput
+        type="text"
+        name="filter"
+        value={value}
+        onChange={onFilter}
+      />
     </FilterLabel>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onFilter: PropTypes.func.isRequired,
+};

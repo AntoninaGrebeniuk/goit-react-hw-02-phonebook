@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { Form } from '../Form/Form';
 import { ContactList } from '../ContactList/ContactList';
 import { Filter } from '../Filter/Filter';
-import { Container, Wrapper } from './App.styled';
+import { Container, Wrapper, Phonebook, Contacts } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -28,21 +28,43 @@ export class App extends Component {
     }));
   };
 
+  onFilter = ({ target }) => {
+    this.setState({ filter: target.value });
+    // console.log(this.state.filter);
+  };
+
+  getContactByName = () => {
+    const normalizedFilter = this.state.filter.toLowerCase();
+    const filterContacts = this.state.contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizedFilter)
+    );
+
+    return filterContacts;
+  };
+
+  removeContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
+
   render() {
+    const { filter } = this.state;
+    const filterContact = this.getContactByName();
+
     return (
       <Container style={{}}>
-        <div>
-          <h1>Phonebook</h1>
-          <Form createContact={this.createContact} />
-        </div>
+        <Phonebook>Phonebook</Phonebook>
+        <Form createContact={this.createContact} />
 
-        <div>
-          <h2>Contacts</h2>
-          <Wrapper>
-            <Filter />
-            <ContactList contacts={this.state.contacts} />
-          </Wrapper>
-        </div>
+        <Contacts>Contacts</Contacts>
+        <Wrapper>
+          <Filter value={filter} onFilter={this.onFilter} />
+          <ContactList
+            contacts={filterContact}
+            onRemoveContact={this.removeContact}
+          />
+        </Wrapper>
       </Container>
     );
   }
